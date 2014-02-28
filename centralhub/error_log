@@ -1,0 +1,269 @@
+[24-Feb-2014 06:45:37 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:48:04 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:48:09 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:50:04 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:50:08 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:50:09 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:50:10 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 06:50:11 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 07:06:54 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 07:06:59 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 14
+[24-Feb-2014 07:32:49 UTC] PHP Fatal error:  Call to a member function model() on a non-object in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 16
+[24-Feb-2014 08:50:06 UTC] PHP Fatal error:  Can't use method return value in write context in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 15
+[24-Feb-2014 08:50:19 UTC] PHP Fatal error:  Can't use method return value in write context in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 15
+[24-Feb-2014 08:50:42 UTC] PHP Fatal error:  Call to a member function flashdata() on a non-object in /home/deepakap6/public_html/centralhub/application/views/sears/index.php on line 15
+[25-Feb-2014 05:39:11 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:151
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->login('apiUser', 'abc123!@#')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 151
+[25-Feb-2014 05:40:56 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:151
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 151
+[25-Feb-2014 05:40:59 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:151
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 151
+[25-Feb-2014 05:49:53 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:151
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 151
+[25-Feb-2014 05:49:59 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:151
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(151): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 151
+[25-Feb-2014 06:13:46 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('api_user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:14:53 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('api_user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:15:27 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('api_user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:17:39 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:17:49 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('apiUser', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:19:40 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('username', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:19:50 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:156
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(156): SoapClient->login('username', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 156
+[25-Feb-2014 06:20:21 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('username', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:20:25 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('username', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:25:01 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:25:10 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:25:49 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:29:37 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('user', 'abcd123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:34:27 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('user', 'test123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:36:14 UTC] PHP Fatal error:  Uncaught SoapFault exception: [2] Access denied. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:157
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->__call('login', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(157): SoapClient->login('apiUser', 'test123')
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 157
+[25-Feb-2014 06:46:41 UTC] PHP Fatal error:  Uncaught SoapFault exception: [Client] Function ("call") is not a valid method for this service in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:163
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(163): SoapClient->__call('call', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(163): SoapClient->call('efd709e5b3eb74f...', 'product.list', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 163
+[25-Feb-2014 07:18:09 UTC] PHP Fatal error:  Uncaught SoapFault exception: [5] Session expired. Try to relogin. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:159
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(159): SoapClient->__call('catalogProductL...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(159): SoapClient->catalogProductList(NULL)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 159
+[25-Feb-2014 10:16:40 UTC] PHP Fatal error:  Call to a member function catalogProductAttributeSetList() on a non-object in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 160
+[25-Feb-2014 10:35:09 UTC] PHP Fatal error:  Uncaught SoapFault exception: [1] The value of attribute "SKU" must be unique in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:180
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(180): SoapClient->__call('catalogProductC...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(180): SoapClient->catalogProductCreate('ae108918ad21970...', 'simple', 4, 'product_sku', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 180
+[25-Feb-2014 12:04:23 UTC] PHP Fatal error:  SOAP-ERROR: Encoding: string '\xff...' is not a valid utf-8 string in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 208
+[25-Feb-2014 12:04:23 UTC] PHP Fatal error:  Uncaught SoapFault exception: [Client] SOAP-ERROR: Encoding: string '\xff...' is not a valid utf-8 string in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:208
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->__call('catalogProductA...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->catalogProductAttributeMediaUpdate('af56d82ba3ceb54...', 1, '/i/m/image.jpg', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 208
+[25-Feb-2014 12:05:52 UTC] PHP Fatal error:  Uncaught SoapFault exception: [103] Requested image not exists in product images' gallery. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:208
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->__call('catalogProductA...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->catalogProductAttributeMediaUpdate('2d2c3bd3f6670b5...', 1, '/i/m/image.jpg', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 208
+[25-Feb-2014 12:17:01 UTC] PHP Fatal error:  Uncaught SoapFault exception: [103] Requested image not exists in product images' gallery. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:208
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->__call('catalogProductA...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->catalogProductAttributeMediaUpdate('e8f19e595b8554b...', 18, '/i/m/image.jpg', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 208
+[25-Feb-2014 12:18:05 UTC] PHP Fatal error:  Uncaught SoapFault exception: [103] Requested image not exists in product images' gallery. in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:208
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->__call('catalogProductA...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(208): SoapClient->catalogProductAttributeMediaUpdate('d3cae75afee4ad5...', 18, Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 208
+[26-Feb-2014 10:20:37 UTC] PHP Parse error:  syntax error, unexpected ''Desc' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 104
+[26-Feb-2014 10:24:17 UTC] PHP Fatal error:  Uncaught SoapFault exception: [1] The value of attribute "SKU" must be unique in /home/deepakap6/public_html/centralhub/application/controllers/sears.php:183
+Stack trace:
+#0 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(183): SoapClient->__call('catalogProductC...', Array)
+#1 /home/deepakap6/public_html/centralhub/application/controllers/sears.php(183): SoapClient->catalogProductCreate('6d5347ca1d6b4a7...', 'simple', 4, 'product_sku', Array)
+#2 [internal function]: Sears->magentoAPI()
+#3 /home/deepakap6/public_html/centralhub/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/deepakap6/public_html/centralhub/index.php(204): require_once('/home/deepakap6...')
+#5 {main}
+  thrown in /home/deepakap6/public_html/centralhub/application/controllers/sears.php on line 183

@@ -1,0 +1,33 @@
+[18-Feb-2014 10:55:27 UTC] PHP Fatal error:  Call to a member function getUrlPath() on a non-object in /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Resource/Url.php on line 904
+[18-Feb-2014 10:55:30 UTC] PHP Fatal error:  Call to a member function getUrlPath() on a non-object in /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Resource/Url.php on line 904
+[18-Feb-2014 10:56:07 UTC] PHP Fatal error:  Call to a member function getUrlPath() on a non-object in /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Resource/Url.php on line 904
+[18-Feb-2014 11:01:31 UTC] PHP Fatal error:  Call to a member function getUrlPath() on a non-object in /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Resource/Url.php on line 904
+[18-Feb-2014 11:01:35 UTC] PHP Fatal error:  Call to a member function getUrlPath() on a non-object in /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Resource/Url.php on line 904
+[18-Feb-2014 11:14:08 UTC] PHP Fatal error:  Uncaught exception 'Mage_Core_Exception' with message 'Image does not exist.' in /home/deepakap6/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product/Attribute/Backend/Media.php(274): Mage::throwException('Image does not ...')
+#1 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product.php(1047): Mage_Catalog_Model_Product_Attribute_Backend_Media->addImage(Object(Mage_Catalog_Model_Product), 'http://www.smar...', Array, false, false)
+#2 /home/deepakap6/public_html/category.php(56): Mage_Catalog_Model_Product->addImageToMediaGallery('http://www.smar...', Array, false, false)
+#3 {main}
+  thrown in /home/deepakap6/public_html/app/Mage.php on line 595
+[18-Feb-2014 13:15:29 UTC] PHP Fatal error:  Uncaught exception 'Mage_Eav_Model_Entity_Attribute_Exception' with message 'The value of attribute "SKU" must be unique' in /home/deepakap6/public_html/app/code/core/Mage/Core/Model/Config.php:1348
+Stack trace:
+#0 /home/deepakap6/public_html/app/Mage.php(463): Mage_Core_Model_Config->getModelInstance('eav/entity_attr...', 'The value of at...')
+#1 /home/deepakap6/public_html/app/code/core/Mage/Eav/Model/Entity/Abstract.php(661): Mage::getModel('eav/entity_attr...', 'The value of at...')
+#2 /home/deepakap6/public_html/app/code/core/Mage/Eav/Model/Entity/Abstract.php(830): Mage_Eav_Model_Entity_Abstract->walkAttributes('backend/validat...', Array)
+#3 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product.php(189): Mage_Eav_Model_Entity_Abstract->validate(Object(Mage_Catalog_Model_Product))
+#4 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product/Api.php(201): Mage_Catalog_Model_Product->validate()
+#5 /home/deepakap6/public_html/product.php(30): Mage_Catalog_Model_Product_Api->create in /home/deepakap6/public_html/app/code/core/Mage/Core/Model/Config.php on line 1348
+[18-Feb-2014 13:15:34 UTC] PHP Fatal error:  Uncaught exception 'Mage_Eav_Model_Entity_Attribute_Exception' with message 'The value of attribute "SKU" must be unique' in /home/deepakap6/public_html/app/code/core/Mage/Core/Model/Config.php:1348
+Stack trace:
+#0 /home/deepakap6/public_html/app/Mage.php(463): Mage_Core_Model_Config->getModelInstance('eav/entity_attr...', 'The value of at...')
+#1 /home/deepakap6/public_html/app/code/core/Mage/Eav/Model/Entity/Abstract.php(661): Mage::getModel('eav/entity_attr...', 'The value of at...')
+#2 /home/deepakap6/public_html/app/code/core/Mage/Eav/Model/Entity/Abstract.php(830): Mage_Eav_Model_Entity_Abstract->walkAttributes('backend/validat...', Array)
+#3 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product.php(189): Mage_Eav_Model_Entity_Abstract->validate(Object(Mage_Catalog_Model_Product))
+#4 /home/deepakap6/public_html/app/code/core/Mage/Catalog/Model/Product/Api.php(201): Mage_Catalog_Model_Product->validate()
+#5 /home/deepakap6/public_html/product.php(30): Mage_Catalog_Model_Product_Api->create in /home/deepakap6/public_html/app/code/core/Mage/Core/Model/Config.php on line 1348
+[25-Feb-2014 12:41:23 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/deepakap6/public_html/app/design/frontend/default/blanco/template/catalog/product/new.phtml on line 29
+[25-Feb-2014 12:41:26 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/deepakap6/public_html/app/design/frontend/default/blanco/template/catalog/product/new.phtml on line 29
+[25-Feb-2014 13:03:50 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/deepakap6/public_html/app/design/frontend/default/blanco/template/catalog/product/list.phtml on line 28
+[25-Feb-2014 13:04:09 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/deepakap6/public_html/app/design/frontend/default/blanco/template/catalog/product/list.phtml on line 28
+[25-Feb-2014 13:24:28 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/deepakap6/public_html/app/design/frontend/default/blanco/template/catalog/product/list.phtml on line 167
