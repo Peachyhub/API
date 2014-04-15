@@ -19,7 +19,7 @@
                 <form method="post" action="<?php echo base_url() . 'sears/saveProducts'; ?>" name="sears">
                     <label>Store Name: </label>
                     <select name="storeName">
-                        <option value="sears">Sears</option>
+                        <option value="Sears">Sears</option>
                         <option value="Kmart">Kmart</option>
                     </select>
                     <label>Select Category: </label>                    
@@ -27,13 +27,33 @@
                     $option = array('' => 'Select');
                     if (is_array($categories) && !empty($categories)) {
                         foreach ($categories as $key => $value) {
-                            $option[$value->category_id.'|'.$value->category_name] = $value->category_name;
+                            $option[$value->categories_id.'|'.$value->category_name] = $value->category_name;
                         }
                     }
                     echo form_dropdown('categories', $option);
                     ?>                    
                     <input type="submit" name="submit" value="Submit"/>
                 </form>
+		<div>
+                <form method="post" action="<?php echo base_url() . 'sears/insertUpdateCategories'; ?>" name="insertupdate">
+    		 <label>Select Existing Category for Update: </label>                    
+                    <?php
+                    $option = array('' => 'Select');
+                    if (is_array($categories) && !empty($categories)) {
+                        foreach ($categories as $key => $value) {
+                            $option[$value->category_id.'|'.$value->categories_id.'|'.$value->category_name] = $value->category_name;
+                        }
+                    }
+                    echo form_dropdown('update_categories', $option);
+                    ?>      
+		<br/>   
+		<label> Enter Category Name: </label><input type="text" name="categories_name">
+		<label> Enter Category Ids from magento seprated by ,: </label><input type="text" name="categories_ids">
+	        <input type="submit" name="insert" value="Submit"/>
+		</form>
+
+		
+		</div>
             </div>
         </div>
     </body>
