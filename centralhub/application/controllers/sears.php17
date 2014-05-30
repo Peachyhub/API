@@ -47,7 +47,6 @@ class Sears extends CI_Controller {
         $data['getVendorList'] = $this->sears_model->getVendorList();
 
 
-
         $this->load->view('sears/categories', $data);
     }
     /*
@@ -106,15 +105,11 @@ class Sears extends CI_Controller {
       	 $parentCategories = explode("|",$this->input->post('parentCategories'));
          $childCategories = explode("|",$this->input->post('childCategories'));
          $subChildCategories = explode("|",$this->input->post('subChildCategories'));
-         $sub2ChildCategories = explode("|",$this->input->post('sub2ChildCategories'));
-
          $categories_ids = $this->input->post('categories_ids');
 	 $magentoParentCategories = explode("|",$this->input->post('magentoParentCategories'));
          $magentoLevel2Categories = explode("|",$this->input->post('magentoLevel2Categories'));
          $magentoLevel3Categories = explode("|",$this->input->post('magentoLevel3Categories'));
          $magentoLevel4Categories = explode("|",$this->input->post('magentoLevel4Categories'));
-         $searchArray = array("&","," ," ", "  ");
-         $replaceArray = array("%26", "%2C", "%20", "%20%20");
  	
        if (empty($categories_ids)) {
             $this->session->set_flashdata('ERROR', 'Please enter magento categorires IDs into textbox.');
@@ -148,15 +143,13 @@ class Sears extends CI_Controller {
 	} else {
  		 $magentoCategoryString = $magentoParentCategories[2]."(".$magentoParentCategories[1].")";
 	}
-        if(isset($storeName) && isset($parentCategories) && isset($childCategories) && isset($subChildCategories) && isset($sub2ChildCategories)) {
-         $categoriesdata=str_replace($searchArray,$replaceArray,$parentCategories[1]."|". $childCategories[1]."|".$subChildCategories[1]."|".$sub2ChildCategories[1]);
-	}
-	else if(isset($storeName) && isset($parentCategories) && isset($childCategories) && isset($subChildCategories)) {
-         $categoriesdata=str_replace($searchArray,$replaceArray,$parentCategories[1]."|". $childCategories[1]."|".$subChildCategories[1]);
+
+	if(isset($storeName) && isset($parentCategories) && isset($childCategories) && isset($subChildCategories)) {
+         $categoriesdata=str_replace("&","%26",$parentCategories[1]."|". $childCategories[1]."|".$subChildCategories[1]);
 	} else if(isset($storeName) && isset($parentCategories) &&  isset($childCategories)) {
-         $categoriesdata=str_replace($searchArray,$replaceArray,$parentCategories[1]."|". $childCategories[1]);
+         $categoriesdata=str_replace("&","%26",$parentCategories[1]."|". $childCategories[1]);
 	} else if(isset($storeName) && isset($parentCategories)) {
-         $categoriesdata=str_replace($searchArray,$replaceArray,$parentCategories[1]);
+         $categoriesdata=str_replace("&","%26",$parentCategories[1]);
 	} else {
         $this->session->set_flashdata('ERROR', 'Please select store and categories correctlly.');
         redirect(base_url() . 'sears/categoryMapping');
@@ -167,10 +160,10 @@ class Sears extends CI_Controller {
  if (!empty($searsapiKey) && !empty($storeName) && !empty($categoriesdata)) {
             $categoryId = $categories_ids;
             /* Call API */
-             $url = "http://api.developer.sears.com/v2.1/products/browse/products/" .$storeName[0]. "/json/?category=".$categoriesdata."&apikey=$searsapiKey";
+            echo $url = "http://api.developer.sears.com/v2.1/products/browse/products/" .$storeName[0]. "/json/?category=".$categoriesdata."&apikey=$searsapiKey";
 //$url="http://api.developer.sears.com/v2.1/products/browse/products/sears/json/?category=Cameras%20%26%20Camcorders|Digital%20Picture%20Frames|Digital%20Picture%20Frames&apikey=NfrmXqgKlTbBnPZeUYanttwkeLlXAfVY";
             /*  Initiate curl  */
-         $ch = curl_init();
+            $ch = curl_init();
             /* Disable SSL verification */
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             /* Will return the response, if false it print the response */
@@ -664,31 +657,26 @@ class Sears extends CI_Controller {
             $jsonResult = curl_exec($ch);
 	    curl_close($ch);
             $result = json_decode($jsonResult, true);
-            $searchArray = array("&","," ," ", "  ");
-            $replaceArray = array("%26", "%2C", "%20", "%20%20");
  	   if($result['SearchResults']['Status']['ResponseCode']==0){
 		$countCategories=0;
 		foreach($result['SearchResults']['Verticals'] as $parentcategories) {
 		$VerticalNameCategories = trim($parentcategories['VerticalName']);
 		$parentCategory = $this->sears_model->searsKmartParentCategoires($VerticalNameCategories); // Insert Parent categories
-                $parentCounter=$countCategories++;
-                $url= "http://api.developer.sears.com/v2.1/products/browse/categories/Sears/json?category=".str_replace($searchArray,$replaceArray,$VerticalNameCategories)."&apikey=".$searsapiKey;
-                $ch = curl_init();
+		$parentCounter=$countCategories++;
+		$url= "http://api.developer.sears.com/v2.1/products/browse/categories/Sears/json?category=".str_replace("&","%26",$VerticalNameCategories)."&apikey=".$searsapiKey;
+            	$ch = curl_init();
            	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
            	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
           	curl_setopt($ch, CURLOPT_URL, $url); 
            	$jsonResult = curl_exec($ch);
-                curl_close($ch);
+	  	curl_close($ch);
            	$result = json_decode($jsonResult, true);
  			if($result['SearchResults']['Status']['ResponseCode']==0 && isset($result['SearchResults']['NavGroups'][0]['ShopByCategories']))  {
 				$subcount=0;
-
-				foreach($result['SearchResults']['NavGroups'][0]['ShopByCategories'] as $subcategories1) {
+				foreach($result['SearchResults']['NavGroups'][0]['ShopByCategories'] as $subcategories) {
 				$childCounter=$subcount++;
-                                $searchArray = array("&", " ", "  ");
-                                $replaceArray = array("%26", "%20", "%20%20");
-                                $childCategory = $this->sears_model->searsKmartChildCategoires($subcategories1['CategoryName'], $parentCategory); // Insert child category 
-				$url= "http://api.developer.sears.com/v2.1/products/browse/categories/Sears/json?category=".str_replace($searchArray, $replaceArray ,$VerticalNameCategories)."|".str_replace($searchArray, $replaceArray ,$subcategories1['CategoryName'])."&apikey=".$searsapiKey;
+				$childCategory = $this->sears_model->searsKmartChildCategoires($subcategories['CategoryName'], $parentCategory); // Insert child category 
+				$url= "http://api.developer.sears.com/v2.1/products/browse/categories/Sears/json?category=".str_replace("&","%26",$VerticalNameCategories)."|".str_replace("&","%26",$subcategories['CategoryName'])."&apikey=".$searsapiKey;
             			$ch = curl_init();
            			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
            			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -697,23 +685,10 @@ class Sears extends CI_Controller {
 	  			curl_close($ch);
            			$result = json_decode($jsonResult, true);
  					if($result['SearchResults']['Status']['ResponseCode']==0 && isset($result['SearchResults']['NavGroups'][0]['ShopByCategories']))  {		$secoundLevelcout=0;
-					foreach($result['SearchResults']['NavGroups'][0]['ShopByCategories'] as $subcategories2) {
+					foreach($result['SearchResults']['NavGroups'][0]['ShopByCategories'] as $subcategories) {
 					$secoundLevelcoutchildCounter=$secoundLevelcout++;
-					$subCategory=$this->sears_model->searsKmartSubChildCategoires($subcategories2['CategoryName'], $childCategory);
-                                            $url= "http://api.developer.sears.com/v2.1/products/browse/categories/Sears/json?category=".str_replace($searchArray, $replaceArray ,$VerticalNameCategories)."|".str_replace($searchArray, $replaceArray ,$subcategories1['CategoryName'])."|".str_replace($searchArray, $replaceArray ,$subcategories2['CategoryName'])."&apikey=".$searsapiKey;
-                                            $ch = curl_init();
-                                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                                            curl_setopt($ch, CURLOPT_URL, $url); 
-                                            $jsonResult = curl_exec($ch);
-                                            curl_close($ch);
-                                            $result = json_decode($jsonResult, true);
-                                                if($result['SearchResults']['Status']['ResponseCode']==0 && isset($result['SearchResults']['NavGroups'][0]['ShopByCategories']))  {		$secoundLevelcout2=0;
-                                		foreach($result['SearchResults']['NavGroups'][0]['ShopByCategories'] as $subcategories3) {
-                                                $secoundLevelcoutchildCounter2=$secoundLevelcout2++;
-                                                $this->sears_model->searsKmartSub2ChildCategoires($subcategories3['CategoryName'], $subCategory);
-                                                }
-                                                
+					$this->sears_model->searsKmartSubChildCategoires($subcategories['CategoryName'], $childCategory);
+					}
 				}
 
 
@@ -723,8 +698,7 @@ class Sears extends CI_Controller {
 		}
 	}
     }
-           }
- } 
+
      /*
      * Name : index
      * Create on: 19/March/2014
@@ -739,19 +713,14 @@ class Sears extends CI_Controller {
 	        echo json_encode($this->sears_model->getChildCategories($idOnly[0]));
     }
 
-    public function ajaxCallForSubCategories() { 
+    public function ajaxCallForSubCategories() {
 		$id = trim($this->input->post('parentCatID'));
 		$idOnly=explode("|",$id);
 	        echo json_encode($this->sears_model->getSubChildCategories($idOnly[0]));
     }
-    
-    public function ajaxCallForSub2Categories() {
-		$id = trim($this->input->post('parentCatID'));
-		$idOnly=explode("|",$id);
-	        echo json_encode($this->sears_model->getSub2ChildCategories($idOnly[0]));
-    }
 
- 
+
+
 	/*
      * Name : index
      * Create on: 25/March/2014

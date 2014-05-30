@@ -41,7 +41,7 @@
 		<label>Store Name: </label>
                     <select name="storeName">
 			<?php foreach($getVendorList as $vendorName) { ?>
-                        <option value="<?php echo $vendorName->vendor_name.'|'.$vendorName->vendor_code.'|'.$vendorName->vendor_key; ?>"><?php echo ucwords($vendorName->vendor_name); ?></option>
+                        <option value="<?php echo $vendorName->vendor_name.'|'.$vendorName->vendor_id.'|'.$vendorName->vendor_key; ?>"><?php echo ucwords($vendorName->vendor_name); ?></option>
 			<?php } ?>
                     </select>
                     <label>Select Category: </label>                    
@@ -60,7 +60,11 @@
 		?>
 		<?php 
 		$option = array('' => 'Select');
-		echo form_dropdown('subChildCategories', $option," ",'id="subChildCategories"');
+		echo form_dropdown('subChildCategories', $option," ",'id="subChildCategories"'); 
+		?>
+                    	<?php 
+		$option = array('' => 'Select');
+		echo form_dropdown('sub2ChildCategories', $option," ",'id="sub2ChildCategories"');
 		?>
 		<label>Magento Cat IDs Seprated By , : </label><input type="text" name="categories_ids">
 	        <input type="submit" name="insert" value="Submit"/>
@@ -109,7 +113,7 @@
 		 if(result === false){
 			alert('No child category found can leave it.');
 		 } else {
-
+ 
 		           var dropDown='<option value="">Select</option>';
 					for(var value in result) { 
 						if(result[value]['child_category_id'] != null && result[value]['child_category_id'] !='') 
@@ -123,7 +127,35 @@
                 			}
             			})
         		});
+ 
+     $('#subChildCategories').change(function () {
+	     /* Function to get sub categories from SubCategories table*/
+	     	    var catIdName = $(this).val();
+            		$.ajax({
+             		   url: "<?php echo base_url() . 'sears/ajaxCallForSub2Categories'; ?>",
+             		   async: false,
+			   type:"post",
+                	   dataType: "json",
+                           data: { parentCatID:catIdName },
+                           success: function(result) {
+		 if(result === false){
+			alert('No child category found can leave it.');
+		 } else {
 
+		           var dropDown='<option value="">Select</option>';
+					for(var value in result) { 
+						if(result[value]['subchild_category_id'] != null && result[value]['subchild_category_id'] !='') 
+						dropDown+='<option value="'+result[value]["sub2child_category_id"]+"|"+result[value]["sub2_category_name"]+'">'+result[value]["sub2_category_name"]+"("+result[value]["sub2child_category_id"]+")"+'</option>'; 
+
+					}
+					$('#sub2ChildCategories').html(dropDown); 
+			}
+
+
+                			}
+            			})
+        		});
+                        
        		 $('#magentoParentCategories').change(function () {
 	         var catIdName = $(this).val();
            	 $.ajax({
@@ -148,6 +180,7 @@
 		}
             	})
         	});
+                
 
        		 $('#magentoLevel2Categories').change(function () {
 	         var catIdName = $(this).val();
